@@ -1,0 +1,14 @@
+Invalid fragment leaves graph unchanged; three preview errors restore active tab
+UTF-8 request split inside a multibyte character preserved correctly
+Recipe validated, applied and rendered: matte_clay
+Recipe validated, applied and rendered: polished_metal
+Recipe validated, applied and rendered: checker_ceramic
+Recipe validated, applied and rendered: rough_stone
+Recipe validated, applied and rendered: old_brick
+Recipe validated, applied and rendered: brushed_steel
+Recipe validated, applied and rendered: voronoi_tiles
+Recipe validated, applied and rendered: fabric_weave
+Recipe validated, applied and rendered: lava_emissive
+Recipe validated, applied and rendered: scifi_panels
+Live contracts passed; 10 recipe previews
+Application log contains no GDScript errors

@@ -1,0 +1,11 @@
+MCP handshake OK; 35 tools registered
+Material Maker ready: {'app': 'Material Maker', 'app_version': '1.7', 'bridge_version': '0.3.1', 'godot_version': '4.7-stable (official)', 'protocol_version': 2}
+Curated 10-recipe catalog discovery OK
+Created and identified a fresh material graph: material-14
+Node discovery OK: {'category': 'Simple/Uniform/Grayscale', 'label': 'Grayscale', 'type': 'uniform_greyscale'}
+Validation, batch graph creation, undo/redo, and connections OK
+Created and inspected node: uniform_greyscale
+Parameter and connection operations OK
+Duplicate and remove operations OK
+File/inline 3D previews and restored parameter variations OK
+Render, save, hashed export manifest (3 files), 2 PBR images, reload, and recipe OK

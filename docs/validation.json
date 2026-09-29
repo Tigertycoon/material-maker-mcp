@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-29",
+  "version": "0.3.1",
+  "upstream_commit": "3a0a4bbd2662fd647f08767fe36d03024fd0d0c0",
+  "local_python": "3.12.11",
+  "host_tests": 36,
+  "mcp_tools": 35,
+  "recipes_rendered": 10,
+  "full_mcp_workflow": "passed",
+  "two_process_queue": "passed",
+  "final_gdscript_errors": 0,
+  "sha256": {
+    "addons/mcp_bridge/mcp_bridge.gd": "f754a0895a9e2f6d764928b61f1728bde527b3cc6243660a328867128ace3d4d",
+    "scripts/concurrency_gate.py": "dc74f691464edb8c68d8781529a0515300ace6c2cee47bc30aba18c8c7be27a5",
+    "scripts/install_bridge.py": "8b081a57678c172376bbbd2ea6843bc8a43fbfd3cd1015445df216f82c960c3b",
+    "scripts/live_contracts.py": "87158cf91fae5e233114b873d7f3a9c0e8ccd525bcf21589a3a26eb65596e8d0",
+    "scripts/smoke_mcp.py": "34eee8b141f98cc5be4b0717ed391b2edb876b11de5d40d7a4f503f24325bc27",
+    "src/material_maker_mcp/__init__.py": "bd48c7afb7a4c72b0c0868cbd1287055d7566fc91a0587c8f9d8c46460891766",
+    "src/material_maker_mcp/bridge.py": "9544539e6d53bcbb2afcd00325a624ea416a47835b80eb207355a8214a99f8fa",
+    "src/material_maker_mcp/recipes.json": "4867d7023ab54e4ee18ec6254dccb93ec8338df321f15a11f0bce8a6c1f480e1",
+    "src/material_maker_mcp/recipes.py": "1fa8104f2bfc92812af635abbd96b05c8e75de16788e8b13d9e7c1741c012650",
+    "src/material_maker_mcp/server.py": "2df3c23e0eb9c80806b7ce07c9f301a59e437f416dffe9c40e2efb89b4cd8a8f",
+    "tests/test_bridge.py": "4ad28a9aa0ef24aa4abf97cdcd6b16cf88e9482e6ee3eb7a95c25bdaca192ad6",
+    "tests/test_install_bridge.py": "1c3f53d7bf03d0dcacb2d05ffb4da9df159c29938d0ae1a944c6f2d7441c7a6b",
+    "tests/test_recipes.py": "ceabdfa4907cdc0e9e280b4825c4842c020276c89ec0d0e0a0ac2bbf22e3f00f",
+    "tests/test_server.py": "9f58247f2489e1ef1a78bb9ebc99e593c7f1e3b5da3d99c1d80ab2e4c72700bb"
+  }
+}

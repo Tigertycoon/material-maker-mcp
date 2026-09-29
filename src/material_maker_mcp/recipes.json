@@ -1,0 +1,1035 @@
+[
+  {
+    "id": "matte_clay",
+    "title": "Matte Clay",
+    "description": "Warm, non-metallic clay with a uniformly rough surface.",
+    "tags": [
+      "starter",
+      "organic",
+      "matte"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Clay_Color",
+        "type": "uniform",
+        "parameters": {
+          "color": {
+            "type": "Color",
+            "r": 0.42,
+            "g": 0.16,
+            "b": 0.08,
+            "a": 1.0
+          }
+        },
+        "node_position": {
+          "x": -620,
+          "y": -120
+        }
+      },
+      {
+        "name": "RCP_Clay_Roughness",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.82
+        },
+        "node_position": {
+          "x": -620,
+          "y": 100
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Clay_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Clay_Roughness",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Clay_Roughness": {
+        "color": [
+          0.68,
+          0.82,
+          0.94
+        ]
+      }
+    }
+  },
+  {
+    "id": "polished_metal",
+    "title": "Polished Metal",
+    "description": "Neutral polished metal with explicit metallic and roughness controls.",
+    "tags": [
+      "starter",
+      "metal",
+      "clean"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Metal_Color",
+        "type": "uniform",
+        "parameters": {
+          "color": {
+            "type": "Color",
+            "r": 0.58,
+            "g": 0.62,
+            "b": 0.68,
+            "a": 1.0
+          }
+        },
+        "node_position": {
+          "x": -640,
+          "y": -180
+        }
+      },
+      {
+        "name": "RCP_Metal_Metallic",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 1.0
+        },
+        "node_position": {
+          "x": -640,
+          "y": 0
+        }
+      },
+      {
+        "name": "RCP_Metal_Roughness",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.18
+        },
+        "node_position": {
+          "x": -640,
+          "y": 180
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Metal_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Metal_Metallic",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 1
+      },
+      {
+        "from": "RCP_Metal_Roughness",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Metal_Roughness": {
+        "color": [
+          0.08,
+          0.18,
+          0.32
+        ]
+      }
+    }
+  },
+  {
+    "id": "checker_ceramic",
+    "title": "Checker Ceramic",
+    "description": "High-contrast checker tiles with ceramic roughness and shallow relief.",
+    "tags": [
+      "pattern",
+      "tile",
+      "ceramic"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Checker_Pattern",
+        "type": "pattern",
+        "parameters": {
+          "mix": 4,
+          "x_wave": 2,
+          "x_scale": 8.0,
+          "y_wave": 2,
+          "y_scale": 8.0
+        },
+        "node_position": {
+          "x": -820,
+          "y": -100
+        }
+      },
+      {
+        "name": "RCP_Checker_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.025,
+                "g": 0.03,
+                "b": 0.04,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.92,
+                "g": 0.88,
+                "b": 0.72,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -520,
+          "y": -140
+        }
+      },
+      {
+        "name": "RCP_Checker_Roughness",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.28
+        },
+        "node_position": {
+          "x": -500,
+          "y": 120
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Checker_Pattern",
+        "from_port": 0,
+        "to": "RCP_Checker_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Checker_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Checker_Roughness",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Checker_Pattern",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Checker_Pattern": {
+        "x_scale": [
+          4.0,
+          8.0,
+          12.0
+        ],
+        "y_scale": [
+          4.0,
+          8.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "rough_stone",
+    "title": "Rough Stone",
+    "description": "Layered FBM stone with grayscale mineral coloring and height variation.",
+    "tags": [
+      "noise",
+      "stone",
+      "organic"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Stone_Noise",
+        "type": "fbm4",
+        "parameters": {
+          "noise": 1,
+          "scale_x": 6.0,
+          "scale_y": 6.0,
+          "folds": 1.0,
+          "iterations": 5.0,
+          "persistence": 0.58,
+          "lacunarity": 2.0,
+          "offset": 0.0
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Stone_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.06,
+                "g": 0.065,
+                "b": 0.07,
+                "a": 1.0
+              },
+              {
+                "pos": 0.5,
+                "r": 0.28,
+                "g": 0.3,
+                "b": 0.31,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.7,
+                "g": 0.68,
+                "b": 0.62,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -160
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Stone_Noise",
+        "from_port": 0,
+        "to": "RCP_Stone_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Stone_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Stone_Noise",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Stone_Noise",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Stone_Noise": {
+        "scale_x": [
+          4.0,
+          6.0,
+          10.0
+        ],
+        "scale_y": [
+          4.0,
+          6.0,
+          10.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "old_brick",
+    "title": "Old Brick",
+    "description": "Running-bond masonry with colored mortar-to-brick ramp and depth.",
+    "tags": [
+      "pattern",
+      "brick",
+      "architecture"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Brick_Pattern",
+        "type": "bricks3",
+        "parameters": {
+          "pattern": 0,
+          "repeat": 1.0,
+          "rows": 8.0,
+          "columns": 4.0,
+          "row_offset": 0.5,
+          "mortar": 0.1,
+          "bevel": 0.08,
+          "round": 0.03,
+          "corner": 0.08
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Brick_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.12,
+                "g": 0.11,
+                "b": 0.095,
+                "a": 1.0
+              },
+              {
+                "pos": 0.18,
+                "r": 0.2,
+                "g": 0.07,
+                "b": 0.035,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.58,
+                "g": 0.19,
+                "b": 0.08,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -150
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Brick_Pattern",
+        "from_port": 0,
+        "to": "RCP_Brick_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Brick_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Brick_Pattern",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Brick_Pattern",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Brick_Pattern": {
+        "rows": [
+          6.0,
+          8.0,
+          12.0
+        ],
+        "mortar": [
+          0.06,
+          0.1,
+          0.16
+        ]
+      }
+    }
+  },
+  {
+    "id": "brushed_steel",
+    "title": "Brushed Steel",
+    "description": "Anisotropic horizontal grain driving steel color and roughness.",
+    "tags": [
+      "noise",
+      "metal",
+      "industrial"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Steel_Grain",
+        "type": "noise_anisotropic",
+        "parameters": {
+          "scale_x": 6.0,
+          "scale_y": 384.0,
+          "smoothness": 0.82,
+          "interpolation": 0.9
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Steel_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.22,
+                "g": 0.25,
+                "b": 0.29,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.72,
+                "g": 0.76,
+                "b": 0.8,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -150
+        }
+      },
+      {
+        "name": "RCP_Steel_Metallic",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 1.0
+        },
+        "node_position": {
+          "x": -500,
+          "y": 140
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Steel_Grain",
+        "from_port": 0,
+        "to": "RCP_Steel_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Steel_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Steel_Metallic",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 1
+      },
+      {
+        "from": "RCP_Steel_Grain",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Steel_Grain": {
+        "scale_y": [
+          192.0,
+          384.0,
+          768.0
+        ],
+        "smoothness": [
+          0.65,
+          0.82,
+          0.95
+        ]
+      }
+    }
+  },
+  {
+    "id": "voronoi_tiles",
+    "title": "Voronoi Tiles",
+    "description": "Irregular stone cells with contrasting borders and relief.",
+    "tags": [
+      "noise",
+      "tile",
+      "stone"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Cells",
+        "type": "voronoi2",
+        "parameters": {
+          "scale_x": 7.0,
+          "scale_y": 7.0,
+          "stretch_x": 1.0,
+          "stretch_y": 1.0,
+          "intensity": 0.9,
+          "randomness": 0.72
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Cells_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.05,
+                "g": 0.055,
+                "b": 0.06,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.46,
+                "g": 0.5,
+                "b": 0.52,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -150
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Cells",
+        "from_port": 0,
+        "to": "RCP_Cells_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Cells_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Cells",
+        "from_port": 1,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Cells",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Cells": {
+        "scale_x": [
+          4.0,
+          7.0,
+          12.0
+        ],
+        "scale_y": [
+          4.0,
+          7.0,
+          12.0
+        ],
+        "randomness": [
+          0.45,
+          0.72,
+          1.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "fabric_weave",
+    "title": "Fabric Weave",
+    "description": "Fine crossed-wave weave suitable as a textile foundation.",
+    "tags": [
+      "pattern",
+      "fabric",
+      "organic"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Weave",
+        "type": "pattern",
+        "parameters": {
+          "mix": 0,
+          "x_wave": 0,
+          "x_scale": 24.0,
+          "y_wave": 0,
+          "y_scale": 24.0
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Weave_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.035,
+                "g": 0.07,
+                "b": 0.11,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.16,
+                "g": 0.34,
+                "b": 0.48,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -150
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Weave",
+        "from_port": 0,
+        "to": "RCP_Weave_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Weave_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Weave",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Weave",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Weave": {
+        "x_scale": [
+          16.0,
+          24.0,
+          32.0
+        ],
+        "y_scale": [
+          16.0,
+          24.0,
+          32.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "lava_emissive",
+    "title": "Emissive Lava",
+    "description": "Folded FBM colored from black crust to hot yellow emission.",
+    "tags": [
+      "noise",
+      "emissive",
+      "fantasy"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Lava_Noise",
+        "type": "fbm4",
+        "parameters": {
+          "noise": 2,
+          "scale_x": 5.0,
+          "scale_y": 5.0,
+          "folds": 2.0,
+          "iterations": 5.0,
+          "persistence": 0.62,
+          "lacunarity": 2.0,
+          "offset": 0.08
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Lava_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.005,
+                "g": 0.002,
+                "b": 0.001,
+                "a": 1.0
+              },
+              {
+                "pos": 0.45,
+                "r": 0.55,
+                "g": 0.025,
+                "b": 0.002,
+                "a": 1.0
+              },
+              {
+                "pos": 0.75,
+                "r": 1.0,
+                "g": 0.24,
+                "b": 0.005,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 1.0,
+                "g": 0.92,
+                "b": 0.24,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -150
+        }
+      },
+      {
+        "name": "RCP_Lava_Roughness",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.58
+        },
+        "node_position": {
+          "x": -500,
+          "y": 150
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Lava_Noise",
+        "from_port": 0,
+        "to": "RCP_Lava_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Lava_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Lava_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 3
+      },
+      {
+        "from": "RCP_Lava_Roughness",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Lava_Noise",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Lava_Noise": {
+        "folds": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "scale_x": [
+          3.0,
+          5.0,
+          8.0
+        ],
+        "scale_y": [
+          3.0,
+          5.0,
+          8.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "scifi_panels",
+    "title": "Sci-Fi Panels",
+    "description": "Offset rectangular panel pattern with cool metallic coloring.",
+    "tags": [
+      "pattern",
+      "metal",
+      "scifi"
+    ],
+    "nodes": [
+      {
+        "name": "RCP_Panels",
+        "type": "pattern",
+        "parameters": {
+          "mix": 4,
+          "x_wave": 2,
+          "x_scale": 5.0,
+          "y_wave": 2,
+          "y_scale": 9.0
+        },
+        "node_position": {
+          "x": -820,
+          "y": -80
+        }
+      },
+      {
+        "name": "RCP_Panels_Color",
+        "type": "colorize",
+        "parameters": {
+          "gradient": {
+            "type": "Gradient",
+            "interpolation": 1.0,
+            "points": [
+              {
+                "pos": 0.0,
+                "r": 0.018,
+                "g": 0.026,
+                "b": 0.04,
+                "a": 1.0
+              },
+              {
+                "pos": 1.0,
+                "r": 0.16,
+                "g": 0.34,
+                "b": 0.48,
+                "a": 1.0
+              }
+            ]
+          }
+        },
+        "node_position": {
+          "x": -510,
+          "y": -160
+        }
+      },
+      {
+        "name": "RCP_Panels_Metallic",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.72
+        },
+        "node_position": {
+          "x": -500,
+          "y": 80
+        }
+      },
+      {
+        "name": "RCP_Panels_Roughness",
+        "type": "uniform_greyscale",
+        "parameters": {
+          "color": 0.34
+        },
+        "node_position": {
+          "x": -500,
+          "y": 230
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from": "RCP_Panels",
+        "from_port": 0,
+        "to": "RCP_Panels_Color",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Panels_Color",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 0
+      },
+      {
+        "from": "RCP_Panels_Metallic",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 1
+      },
+      {
+        "from": "RCP_Panels_Roughness",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 2
+      },
+      {
+        "from": "RCP_Panels",
+        "from_port": 0,
+        "to": "Material",
+        "to_port": 6
+      }
+    ],
+    "recommended_variations": {
+      "RCP_Panels": {
+        "x_scale": [
+          3.0,
+          5.0,
+          8.0
+        ],
+        "y_scale": [
+          6.0,
+          9.0,
+          14.0
+        ]
+      }
+    }
+  }
+]

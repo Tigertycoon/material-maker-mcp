@@ -1,0 +1,1 @@
+Two-process bridge queue gate OK: client durations [0.32s, 0.63s], wall 0.74s, active tab restored
